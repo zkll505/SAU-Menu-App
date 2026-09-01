@@ -91,6 +91,7 @@ def fetch_menus():
 
 
 class MenuColumn(BoxLayout):
+    """A titled, scrollable column showing one day's meals."""
 
     def __init__(self, title, **kwargs):
         super().__init__(orientation='vertical', **kwargs)

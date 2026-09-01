@@ -41,6 +41,7 @@ jobs:
       - name: Build APK with Buildozer
         env:
           ANDROID_SDK_ROOT: ${{ env.ANDROID_HOME }}
+          VIRTUALENV_PIP: "24.0"
         run: buildozer -v android debug 2>&1 | tee build.log
 
       - name: Upload build log (always, even on failure)
