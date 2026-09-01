@@ -32,7 +32,7 @@ def parse_menu_text(text):
 
 
 def fetch_menus():
-    """Network + parsing logic, unchanged from the desktop version.
+    """Network + parsing logic
     Returns (today_name, today_menu, tomorrow_name, tomorrow_menu, error)
     """
     url = "https://www.southern.edu/administration/food/index.html"
@@ -91,7 +91,6 @@ def fetch_menus():
 
 
 class MenuColumn(BoxLayout):
-    """A titled, scrollable column showing one day's meals."""
 
     def __init__(self, title, **kwargs):
         super().__init__(orientation='vertical', **kwargs)
