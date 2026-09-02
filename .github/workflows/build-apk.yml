@@ -16,6 +16,12 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Force python3 to resolve to 3.11 everywhere
+        run: |
+          sudo ln -sf "$(command -v python3)" /usr/bin/python3
+          python3 --version
+          /usr/bin/python3 --version
+
       - name: Install system dependencies
         run: |
           sudo apt-get update
@@ -36,12 +42,11 @@ jobs:
           sdkmanager "platform-tools" "build-tools;33.0.2" "platforms;android-33"
 
       - name: Install Buildozer
-        run: pip install --upgrade buildozer cython==0.29.36
+        run: pip install --upgrade buildozer cython==0.29.36 "python-for-android==2024.1.21"
 
       - name: Build APK with Buildozer
         env:
           ANDROID_SDK_ROOT: ${{ env.ANDROID_HOME }}
-          VIRTUALENV_PIP: "24.0"
         run: buildozer -v android debug 2>&1 | tee build.log
 
       - name: Upload build log (always, even on failure)

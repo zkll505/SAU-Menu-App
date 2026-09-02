@@ -32,7 +32,7 @@ def parse_menu_text(text):
 
 
 def fetch_menus():
-    """Network + parsing logic
+    """Network + parsing logic, unchanged from the desktop version.
     Returns (today_name, today_menu, tomorrow_name, tomorrow_menu, error)
     """
     url = "https://www.southern.edu/administration/food/index.html"
