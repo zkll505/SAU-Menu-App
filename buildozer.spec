@@ -8,6 +8,8 @@ version = 1.0
 
 requirements = python3,kivy,requests,beautifulsoup4,certifi,chardet,idna,urllib3,soupsieve
 
+p4a.branch = v2024.01.21
+
 orientation = portrait
 fullscreen = 0
 
