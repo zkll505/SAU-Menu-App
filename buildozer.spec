@@ -6,7 +6,7 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 version = 1.0
 
-requirements = python3,kivy,requests,beautifulsoup4,certifi,chardet,idna,urllib3,soupsieve
+requirements = python3,kivy,requests,beautifulsoup4,certifi,chardet,idna,urllib3,soupsieve,typing_extensions,charset_normalizer
 
 p4a.branch = v2024.01.21
 
